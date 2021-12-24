@@ -1,0 +1,14 @@
+#include "fujicpm.h"
+
+/**
+ * Mount Device Slot 
+ */
+void fuji_mount_device_slot(unsigned char d, unsigned char m)
+{
+  char m[3]={0xF8,0x00,0x00};
+
+  :qny  m[1]=d;
+  m[2]=m;
+
+  fuji_write(m,3);
+}
